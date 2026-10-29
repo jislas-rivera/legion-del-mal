@@ -5,7 +5,7 @@ on:
 
 jobs:
     reporte-de-reclutamiento:
-        runs-on: ubutu-latest
+        runs-on: ubuntu-latest
 
         steps:
             - name: El agente se presenta
