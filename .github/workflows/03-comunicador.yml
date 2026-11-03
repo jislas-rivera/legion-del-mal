@@ -20,7 +20,7 @@ on:
         description: "Mensaje para el consejo"
         required: true
         default: "La mision fue un exito"
-        
+
       prioridad:
         description: "Nivel de prioridad"
         required: true
@@ -36,5 +36,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-
+      - name: Imprimir inputs
+        run: |
+          echo "Inputs: "
+          echo "Villano: ${{ inputs.villano}}"
+          echo "Mensaje: ${{ inputs.mensaje}}"
+          echo "Prioridad: ${{ inputs.prioridad}}"
