@@ -9,7 +9,7 @@ on:
       villano:
         description: "Que villano envia el mensaje"
         required: true
-        type: 'choice'
+        type: choice
         options:
           - Lex Luthor
           - Joker
