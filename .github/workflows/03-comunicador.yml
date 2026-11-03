@@ -38,6 +38,7 @@ on:
           - eyes
           - dragon
           - ghostbusters
+          - cower
 
 
 jobs:
