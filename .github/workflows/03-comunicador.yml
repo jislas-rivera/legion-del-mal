@@ -29,6 +29,15 @@ on:
           - 🟢 Normal
           - 🟡 Alta
           - 🔴 Critica
+      
+      cowsay:
+        description: "Estilo de transmision"
+        required: true
+        type: choice
+        options:
+          - eyes
+          - dragon
+          - ghostbusters
 
 
 jobs:
@@ -49,7 +58,7 @@ jobs:
           echo ""
           echo "Fecha: $(date -u + "%d/%m/%Y - %H:%M UTC")"
           echo "------- Mensaje --------"
-          cowsay -f eyes "${{inputs.mensaje}}"
+          cowsay -f ${{inputs.cowsay}} "${{inputs.mensaje}}"
           echo ""
           echo "---- ${{inputs.villano}} ----"
           
