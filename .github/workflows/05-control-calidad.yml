@@ -1,0 +1,20 @@
+name: Control de Calidad
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch: # Para ejecutar manualmente el flujo de trabajo desde la interfaz de GitHub
+
+jobs: 
+    revision-de-calidad:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Brainiac Accede a los Planes
+              uses: actions/checkout@v4
+
+            - name: El consejo revisa los cambios
+              run: |
+                    chmod +x scripts/validar-planes.sh
+                    ./scripts/validar-planes.sh
