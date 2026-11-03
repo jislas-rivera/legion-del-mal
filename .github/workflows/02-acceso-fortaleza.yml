@@ -1,0 +1,29 @@
+name: ⭐ Acceso a la fortaleza prohibida
+
+on: push
+
+jobs:
+  acceso-a-la-fortaleza:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: El agente llega a la Fortaleza
+        run: |
+            echo "Agente ${{github.actor}} llega a la fortaleza prohibida."
+            echo ""
+        
+      - name: "Brainiac desbloquea la boveda"
+        uses: actions/checkout@v4
+
+      - name: 'Ahora si, vamos a ver los planes'
+        run: |
+            echo "Buscar los arvhivos de la legion"
+            ls -la
+            echo "Funciona ✅"
+            echo "" 
+            echo "Planes"
+            ls planes/
+            echo "Villanos"
+            ls villanos/
+            echo "Inteligencia"
+            ls inteligencia/

@@ -1,6 +1,8 @@
 name: Reclutamiento de Agente
 
-on: push
+# on: push
+on: 
+  workflow_dispatch: # Para ejecutar manualmente el flujo de trabajo desde la interfaz de GitHub Actions
 
 jobs:
   reporte-de-reclutamiento:
